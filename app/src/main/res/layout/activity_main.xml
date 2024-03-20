@@ -19,25 +19,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.045" />
 
+
     <EditText
         android:id="@+id/editTextInput"
-        android:layout_width="344dp"
-        android:layout_height="205dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="120dp"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
         android:hint="Gib hier deinen Text ein zum verschlüsseln"
-        android:inputType="text" />
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextOutput"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.5"/>
 
     <EditText
         android:id="@+id/editTextOutput"
-        android:layout_width="351dp"
-        android:layout_height="258dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="349dp"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
         android:hint="Gib hier deinen Text ein zum entschlüsseln"
-        android:inputType="text" />
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.5"/>
 
     <Button
         android:id="@+id/buttonEncrypt"
@@ -60,25 +67,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="16dp"/>
-    <!--
-    <Button
-        android:id="@+id/buttonEncrypt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Encrypt"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="677dp"
-        />
-
-    <Button
-        android:id="@+id/buttonDecrypt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Decrypt"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="291dp"
-        tools:layout_editor_absoluteY="677dp" />
-        -->
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String inputText = editTextInput.getText().toString();
-                Verschluesseln.encrypt(inputText);
+                inputText = Verschluesseln.encrypt(inputText);
                 editTextOutput.setText(inputText);
             }
         });
@@ -55,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String inputText = editTextInput.getText().toString();
-                Verschluesseln.decrypt(inputText);
+                inputText = Verschluesseln.decrypt(inputText);
                 editTextOutput.setText(inputText);
             }
         });
 
         //automatisch bilschirmatastatur aufruffen
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
 }
 
