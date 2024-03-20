@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,45 +15,70 @@
         android:textSize="25pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
-
+        app:layout_constraintVertical_bias="0.045" />
 
     <EditText
         android:id="@+id/editTextInput"
         android:layout_width="344dp"
         android:layout_height="205dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="145dp"
-        tools:ignore="MissingConstraints" />
-
+        tools:layout_editor_absoluteY="120dp"
+        android:hint="Gib hier deinen Text ein zum verschlüsseln"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/editTextOutput"
         android:layout_width="351dp"
         android:layout_height="258dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="363dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="349dp"
+        android:hint="Gib hier deinen Text ein zum entschlüsseln"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/buttonEncrypt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Encrypt"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="642dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDecrypt"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/buttonDecrypt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Decrypt"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="642dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toEndOf="@+id/buttonEncrypt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"/>
+    <!--
+    <Button
+        android:id="@+id/buttonEncrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypt"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="677dp"
+        />
+
+    <Button
+        android:id="@+id/buttonDecrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="291dp"
+        tools:layout_editor_absoluteY="677dp" />
+        -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
